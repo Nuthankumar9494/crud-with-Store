@@ -1,0 +1,17 @@
+<button routerLink="/addpost">Add</button>
+<table id="customers">
+    <tr>
+      <th>id</th>
+      <th>Name</th>
+      <th>Designation</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let items of post">
+      <td>{{items.id}}</td>
+      <td>{{items.Name}}</td>
+      <td>{{items.Designation}}</td>
+      <td><button routerLink="/edit/{{items.id}}" >update</button> <button (click)="ondelete(items.id)">delete</button></td>
+      <td></td>
+    </tr>
+   
+  </table>
